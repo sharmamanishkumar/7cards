@@ -149,28 +149,6 @@ button {
 }
 /* ----------------------------bottomcard1---------------- */
 
-/* .desc-bootom {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: normal;
-  width: 40vw;
-}
-.icon-bottom {
-  margin: 0 16px;
-  font-size: 32px;
-}
-.bootom-description {
-  font-size: 12px;
-}
-
-.container-bottom1 {
-  width: 42vw;
-  background-color: #f3f3f3;
-  height: 46vh;
-  border-radius: 6px;
-} */
-
 .desc-bootom {
   width: 24em;
 }
@@ -188,11 +166,10 @@ button {
   place-items: center;
   padding: 20px;
 }
-/* .main .bootom-description {
-  margin: 20px;
-} */
+
 .container-bottom1 {
   background-color: white;
+  border-radius: 10px;
 }
 .icon-bottom {
   background-color: beige;
@@ -276,4 +253,7 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 0 30px;
+}
+#bottomcard1 {
+  margin-right: 20px;
 }
