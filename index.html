@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const files = [
+        "header.html",
+        "bottam2.html",
+        "bottomcard1.html",
+        "maindesc.html",
+        "sidebar1.html",
+        "sidebar2.html",
+        "sidebar3.html",
+      ];
+      Promise.all(
+        files.map((file) => fetch(file).then((response) => response.text()))
+      ).then((data) => {
+        document.getElementById("header").innerHTML = data[0];
+        document.getElementById("bottam2").innerHTML = data[1];
+        document.getElementById("bottomcard1").innerHTML = data[2];
+        document.getElementById("maindesc").innerHTML = data[3];
+        document.getElementById("sidebar1").innerHTML = data[4];
+        document.getElementById("sidebar2").innerHTML = data[5];
+        document.getElementById("sidebar3").innerHTML = data[6];
+      });
+    </script>
+    <div class="main-container">
+      <div id="header"></div>
+      <div class="container">
+        <div class="sidebar-contain">
+          <div id="sidebar1"></div>
+          <div id="sidebar2"></div>
+          <div id="sidebar3"></div>
+        </div>
+        <div class="bootam-container">
+          <div id="maindesc"></div>
+          <div class="cards">
+            <div id="bottomcard1"></div>
+            <div id="bottam2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
