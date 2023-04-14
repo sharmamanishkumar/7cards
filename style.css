@@ -243,7 +243,6 @@ h3 {
 .sidebar-contain {
   display: flex;
   flex-direction: column;
-  /* padding: 20px; */
 }
 .cards {
   display: flex;
